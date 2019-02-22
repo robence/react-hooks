@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function counterHook() {
+const Counter = () => {
   const [count, setCount] = useState(0);
 
   return (
@@ -12,4 +12,6 @@ export default function counterHook() {
       <div>Current: {count}</div>
     </div>
   );
-}
+};
+
+export default Counter;
