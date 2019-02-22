@@ -1,32 +1,35 @@
 import React, { useReducer } from "react";
 
-const initialState = 0;
+const initialState = { count: 0 };
+
+const INCREMENT = "INCREMENT";
+const DECREMENT = "DECREMENT";
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "increment":
-      return state + 1;
-    case "decrement":
-      return state - 1;
+    case INCREMENT:
+      return { count: state.count + 1 };
+    case DECREMENT:
+      return { count: state.count - 1 };
     default:
       throw new Error("Unexpected action");
   }
 };
 
 const Counter = () => {
-  const [count, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <div>
       <div>
-        <button onClick={() => dispatch({ type: "increment" })}>
+        <button onClick={() => dispatch({ type: INCREMENT })}>
           + Increment
         </button>
-        <button onClick={() => dispatch({ type: "decrement" })}>
+        <button onClick={() => dispatch({ type: DECREMENT })}>
           + Decrement
         </button>
       </div>
-      Current: {count}
+      Current: {state.count}
     </div>
   );
 };
