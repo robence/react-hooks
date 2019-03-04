@@ -5,8 +5,9 @@ import React from "react";
  // import Counter from "./CounterFunctionalComponentTS";
 // import Counter from "./CounterFunctionalComponentWithReducer";
 // import Counter from "./CounterFunctionalComponentWithReducerTS";
-import Counter from "./CounterFunctionalComponentWithReducerExtracted";
-// import Counter from "./CounterFunctionalComponentWithReducerExtractedTS";
+// import Counter from "./CounterFunctionalComponentWithReducerExtracted";
+// import Counter from "./CounterFunctionalComponentWithReducerTS";
+import Counter from "./CounterFunctionalComponentWithReducerExtractedTS";
 
 const App = () => (
   <div>

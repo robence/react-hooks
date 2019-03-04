@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 
 type ActionType = {
-  type: 'reset' | 'decrement' | 'increment'
+  type: 'decrement' | 'increment'
 }
 
  interface stateType {
@@ -13,8 +13,6 @@ const initialState = { count: 0 };
 // We only need to set the type here ...
 function reducer(state: stateType, action: ActionType) {
   switch (action.type) {
-    case 'reset':
-      return initialState;
     case 'increment':
       return { count: state.count + 1 };
     case 'decrement':
